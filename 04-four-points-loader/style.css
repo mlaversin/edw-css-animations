@@ -1,0 +1,54 @@
+.container {
+  width: 142px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 20 = 2000% */
+  filter: contrast(20);
+  background-color: #fff;
+}
+
+.container .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  filter: blur(4px);
+  background: black;
+  border-radius: 50%;
+  animation: dotAnim 2800ms infinite;
+}
+
+.container .dots span {
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  display: block;
+  float: left;
+  filter: blur(4px);
+  background-color: black;
+  border-radius: 50%;
+}
+
+.container .dots {
+  margin-top: 12px;
+  margin-left: 31px;
+  animation: dotsAnim 2800ms infinite;
+}
+
+/* 50% only => don't need "alternate" */
+
+@keyframes dotAnim {
+  50% {
+    transform: translateX(96px);
+  }
+}
+
+@keyframes dotsAnim {
+  50% {
+    transform: translateX(-31px);
+  }
+}
